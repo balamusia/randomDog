@@ -11,6 +11,10 @@
     const img = document.createElement('img') // <img>
 img.alt = 'a picture of gangster spongebob'
   img.src = url
+    img.style.position = 'fixed'
+    img.style.left = Math.random() * innerWidth - 200 + 'px'
+    img.style.top = Math.random() * innerHeight + 'px'
+    img.style.width = '200px'
   document.body.appendChild(img)
     
   }
@@ -22,7 +26,7 @@ async function getData () {
   addPic(dogData.message)
   console.log(dogData)
 }
-    getData()
+    window.addEventListener('click', getData)
   
 
 </script>
