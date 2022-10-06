@@ -1,0 +1,30 @@
+
+
+<body>
+  
+  
+  <script>
+
+  
+  function addPic (url){
+    
+    const img = document.createElement('img') // <img>
+img.alt = 'a picture of gangster spongebob'
+  img.src = url
+  document.body.appendChild(img)
+    
+  }
+  
+async function getData () {
+  
+  const rawData = await fetch('https://dog.ceo/api/breeds/image/random')
+  const dogData = await rawData.json()
+  addPic(dogData.message)
+  console.log(dogData)
+}
+    getData()
+  
+
+</script>
+  
+</body>
